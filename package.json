@@ -2,7 +2,6 @@
   "name": "react-foodapp",
   "version": "1.0.0",
   "description": "Food app assignment4 don by Sanskriti Gupta for namastey react classed",
-  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "startDev": "parcel index.html",
