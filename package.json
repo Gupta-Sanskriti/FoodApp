@@ -1,0 +1,24 @@
+{
+  "name": "react-foodapp",
+  "version": "1.0.0",
+  "description": "Food app assignment4 don by Sanskriti Gupta for namastey react classed",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gupta-Sanskriti/FoodApp.git"
+  },
+  "author": "Sanskriti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gupta-Sanskriti/FoodApp/issues"
+  },
+  "homepage": "https://github.com/Gupta-Sanskriti/FoodApp#readme",
+  "dependencies": {
+    "parcel": "^2.8.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
