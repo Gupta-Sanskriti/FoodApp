@@ -1,4 +1,5 @@
 # FoodApp
+
 <div>
     <h1> Commands </h1>
     <ul>
@@ -10,6 +11,7 @@
 <div>
     <h1>To construct this app </h1>
     <h3>For the basic understanding of the website, you can take the reference from the <strong><a href="./website_layout.jpg">website_layout.jpg</a></strong></h3>
+    <img src="./website_layout.jpg"/>
     <p>To construct this app you need some dependencies like parcel, react, react-dom, browserlists, etc. so run the commands given below to create this react app.</p>
     <h2>To create app and install the dependencies and run these commands.</h2>
     <ul>
