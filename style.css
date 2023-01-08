@@ -67,9 +67,6 @@ a{
     display: flex;
     justify-content: flex-start;
     overflow-y: auto;
-    
-    
-
 }
 
 .restaurant>.cards>.card-item{
@@ -79,6 +76,7 @@ a{
     padding: 1rem;
     margin-right:1rem;
     font-weight:lighter;
+    /* text-align:left; */
 }
 .restaurant>.cards>.card-item > img{
     height: 10rem;
@@ -86,7 +84,7 @@ a{
     border-radius: 1rem;
 }
 .restaurant>.cards>.card-item >h1{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 .restaurant>.cards>.card-item >p{
     margin:0.6rem 0;

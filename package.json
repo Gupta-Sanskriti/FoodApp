@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "startDev": "parcel index.html",
-    "startBuild": "parcel build index.html"
+    "startBuild": "parcel build sindex.html"
   },
   "repository": {
     "type": "git",
