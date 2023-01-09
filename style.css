@@ -65,8 +65,8 @@ a{
 }
 .restaurant>.cards{
     display: flex;
-    justify-content: flex-start;
-    overflow-y: auto;
+    justify-content:flex-start;
+    overflow: auto;
 }
 
 .restaurant>.cards>.card-item{

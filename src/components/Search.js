@@ -17,8 +17,11 @@ const Search = (props) => {
             <button
                 type="submit"
                 onClick={() => {
-                    const filteredRestaurants = restaurant.filter((rest) =>
-                        rest.data.name.toLowerCase().includes(searchText)
+                    const filteredRestaurants = restaurant.filter((rest) =>{
+                        if(searchText){
+                            return rest.data.name.toLowerCase().includes(searchText)
+                        }
+                    }
                     );
                     setRestaurant(filteredRestaurants);
                 }}

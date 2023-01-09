@@ -34,7 +34,14 @@
                 }
             </p>
         </li>
-        <li></li>
+        <li>Remove the "main" in the package.json</li>
+        <li>To add browserlist to your code add the below statement in your code. 
+            <p>
+                "browserslist": [
+                    "last 2 versions"
+                 ]
+            </p>
+        </li>
     </ul>
 
 </div>
