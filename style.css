@@ -66,6 +66,8 @@ a{
 .restaurant>.cards{
     display: flex;
     justify-content:flex-start;
+    scrollbar-width: none;
+
     overflow: auto;
 }
 
@@ -76,6 +78,7 @@ a{
     padding: 1rem;
     margin-right:1rem;
     font-weight:lighter;
+    position: relative;
     /* text-align:left; */
 }
 .restaurant>.cards>.card-item > img{
@@ -93,6 +96,16 @@ a{
 .restaurant> .cards> .card-item > h4{
     color: rgb(23, 124, 213);
 
+}
+
+.incdec{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 1rem;
+
+    
 }
 
 

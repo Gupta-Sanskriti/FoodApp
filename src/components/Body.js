@@ -8,6 +8,7 @@ const Body = () => {
   // let searchText = "hello"
   const [searchText, setSearchText] = useState();
   const [restaurants, setRestaurant] = useState(restaurantList);
+
   return (
     <div className="body-container">
       <div className="search-field">
