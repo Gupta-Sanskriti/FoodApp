@@ -100,13 +100,25 @@ a{
 
 .incdec{
     display: flex;
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    /* position: absolute; */
+    /* bottom: 0;
+    right: 0; */
     padding: 1rem;
+    margin: 0;
 
     
 }
+
+
+.incdec_val{
+    padding: 0.3rem;
+}
+.btn-di{
+    padding: 0.3rem;
+    border: 2px solid #000;
+    border-radius: 0.5rem;
+}
+
 
 
 
