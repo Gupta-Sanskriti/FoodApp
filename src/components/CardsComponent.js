@@ -50,7 +50,7 @@ const CardsComponent = (props) => {
           <button
             className="inc btn-di"
             onClick={() => {
-              setNum(num + 1);
+              setNum(num + 2);
             }}
           >
             +
