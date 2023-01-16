@@ -40,7 +40,7 @@ const CardsComponent = (props) => {
               if(num<=0){
                 setNum(0)
               }else{
-                setNum(num - 1);
+                setNum(num - 2);
               }
             }}
           >
