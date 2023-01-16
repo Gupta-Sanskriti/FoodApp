@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import CardsComponent from "./CardsComponent";
 import Search from "./Search";
 const restaurantList = require("../restaurant-list");
@@ -8,6 +8,10 @@ const Body = () => {
   // let searchText = "hello"
   const [searchText, setSearchText] = useState();
   const [restaurants, setRestaurant] = useState(restaurantList);
+
+  useEffect(()=>{
+    console.log("render")
+  },[])
 
   return (
     <div className="body-container">

@@ -1,9 +1,10 @@
 import React,{useEffect} from "react";
 
 const Search = (props) => {
-    console.log(props)
+    // console.log(props)
     const { searchText, restaurant, setSearchText, setRestaurant } = props;
-    console.log(restaurant)
+    // console.log(restaurant)
+    console.log("rendering search");
     return (
         <>
             <input

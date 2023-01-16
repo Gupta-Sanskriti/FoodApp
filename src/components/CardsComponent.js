@@ -46,7 +46,7 @@ const CardsComponent = (props) => {
           >
             -
           </button>
-          <p class="incdec_val">{num}</p>
+          <p className="incdec_val">{num}</p>
           <button
             className="inc btn-di"
             onClick={() => {
