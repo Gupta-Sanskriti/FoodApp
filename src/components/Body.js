@@ -7,7 +7,7 @@ const restaurantList = require("../restaurant-list");
 const Body = () => {
   // let searchText = "hello"
   const [searchText, setSearchText] = useState();
-  const [restaurants, setRestaurant] = useState(restaurantList);
+  const [restaurants, setRestaurant] = useState([]);
 
   // everytime restaurant will render this use effect will render -- no matter whether it is rendered though initial render or search text change
   // useEffect(()=>{
@@ -22,7 +22,7 @@ const Body = () => {
     const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.9161991&lng=80.9442732&page_type=DESKTOP_WEB_LISTING");
     const json = await data.json();
     console.log(json);
-    setRestaurant(json.data.cards[2].data.data.cards)
+    setRestaurant(json?.data?.cards[2]?.data?.data?.cards)
   }
 
   return (
