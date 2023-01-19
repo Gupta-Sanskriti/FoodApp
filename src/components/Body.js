@@ -30,6 +30,10 @@ const Body = () => {
     setFilteredRestaurant(json?.data?.cards[2]?.data?.data?.cards);
   }
 
+  if(!allRestaurant) return <h1>No Data found</h1>;
+
+  if (Filteredrestaurants?.length === 0) return <h1>No Restaurants Found</h1>
+
   return (
     <div className="body-container">
       <div className="search-field">
