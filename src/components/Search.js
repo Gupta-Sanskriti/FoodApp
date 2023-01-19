@@ -2,7 +2,7 @@ import React,{useEffect} from "react";
 
 const Search = (props) => {
     // console.log(props)
-    const { searchText, restaurant, setSearchText, setRestaurant } = props;
+    const { searchText, allRestaurant, setSearchText, setFilteredRestaurant } = props;
     // console.log(restaurant)
     console.log("rendering search");
     return (
@@ -18,13 +18,13 @@ const Search = (props) => {
             <button
                 type="submit"
                 onClick={() => {
-                    const filteredRestaurants = restaurant.filter((rest) =>{
+                    const fRestaurants = allRestaurant.filter((rest) =>{
                         if(searchText){
                             return rest.data.name.toLowerCase().includes(searchText)
                         }
                     }
                     );
-                    setRestaurant(filteredRestaurants);
+                    setFilteredRestaurant(fRestaurants);
                 }}
             >
                 Search

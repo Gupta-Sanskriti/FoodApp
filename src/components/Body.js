@@ -8,7 +8,8 @@ const restaurantList = require("../restaurant-list");
 const Body = () => {
   // let searchText = "hello"
   const [searchText, setSearchText] = useState();
-  const [restaurants, setRestaurant] = useState([]);
+  const [Filteredrestaurants, setFilteredRestaurant] = useState([]);
+  const [allRestaurant, setAllRestaurant] = useState([])
 
   // everytime restaurant will render this use effect will render -- no matter whether it is rendered though initial render or search text change
   // useEffect(()=>{
@@ -25,7 +26,8 @@ const Body = () => {
     );
     const json = await data.json();
     console.log(json);
-    setRestaurant(json?.data?.cards[2]?.data?.data?.cards);
+    setAllRestaurant(json?.data?.cards[2]?.data?.data?.cards);
+    setFilteredRestaurant(json?.data?.cards[2]?.data?.data?.cards);
   }
 
   return (
@@ -33,18 +35,18 @@ const Body = () => {
       <div className="search-field">
         <Search
           searchText={searchText}
-          restaurant={restaurants}
+          allRestaurant={allRestaurant}
           setSearchText={setSearchText}
-          setRestaurant={setRestaurant}
+          setFilteredRestaurant={setFilteredRestaurant}
         />
       </div>
-      {restaurants.length === 0 ? (
+      {allRestaurant.length === 0 ? (
         <Shimmer />
       ) : (
         <div className="restaurant">
           <h1 className="card-head">Restaurants</h1>
           <div className="cards">
-            {restaurants.map((restaurant) => (
+            {Filteredrestaurants.map((restaurant) => (
               <CardsComponent
                 restaurant={restaurant}
                 key={restaurant.data.id}
