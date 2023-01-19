@@ -120,6 +120,17 @@ a{
 }
 
 
+.Shimmer_rest_heading {
+    background-color: rgba(202, 202, 202, 0.727);
+    height: 3rem;
+    width: 12rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+
+
 
 
 
