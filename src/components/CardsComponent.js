@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { IMG_CDN_URL } from "../../constants";
 
 // Cards Component
 const CardsComponent = (props) => {
@@ -24,7 +25,7 @@ const CardsComponent = (props) => {
       <div className="card-item">
         <img
           src={
-            "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" +
+            IMG_CDN_URL +
             cloudinaryImageId
           }
           alt="restaurant-image"
