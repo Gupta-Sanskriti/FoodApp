@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 // Header Component
 const Header = () => {
@@ -11,20 +12,20 @@ const Header = () => {
     return (
       <div className="header">
         <h1 className="logo">FoodApp</h1>
-        <button onClick={()=>{setNew_title("food world") }}>{new_title}</button>
+        {/* <button onClick={()=>{setNew_title("food world") }}>{new_title}</button> */}
         <nav className="nav-bar">
           <ul>
             <li>
-              <a href="/">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="/">About</a>
+              <Link to="/about">About</Link>
             </li>
             <li>
-              <a href="/">ContactUs</a>
+              <Link to="/contact">ContactUs</Link>
             </li>
             <li>
-              <a href="/">Cart</a>
+              <Link to="/">Cart</Link>
             </li>
           </ul>
         </nav>
