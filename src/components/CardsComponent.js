@@ -22,7 +22,7 @@ const CardsComponent = (props) => {
           */}
 
       {/* Another way of rendering dom with ease of code */}
-      <div className="card-item">
+      
         <img
           src={
             IMG_CDN_URL +
@@ -57,7 +57,7 @@ const CardsComponent = (props) => {
             +
           </button>
         </div>
-      </div>
+    
     </>
   );
 };

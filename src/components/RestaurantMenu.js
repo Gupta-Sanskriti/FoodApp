@@ -35,7 +35,7 @@ const RestaurantMenu = () =>{
                 <ul>
                     <h1>Menu</h1>
                     {Object.values(resInfo?.menu?.items).map((item)=>{
-                        console.log(item.name);
+                        // console.log(item.name);
                         return <li key={item.id}>{item.name}</li>
                     })}
                 </ul>
