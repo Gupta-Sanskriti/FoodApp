@@ -243,10 +243,16 @@ input.input-field{
     border:none;
 }
 
+.form-validation{
+    color:rgb(255, 77, 0);
+    margin:0.5rem;
+}
+
 .submit-btn{
-    padding:0.2rem;
-    margin:0.2rem;
-    width: 100%;
+    padding:0.5rem;
+    margin:1rem 0.5rem;
+    margin-top:2rem;
+    width: 80%;
 }
 
 

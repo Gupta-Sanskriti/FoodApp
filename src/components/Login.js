@@ -34,6 +34,7 @@ const Login = () => {
 
   return (
     <div className="form-container">
+      <h1>Login</h1>
       <form className="form-card" onSubmit={formik.handleSubmit}>
         <label htmlFor="name" className="input-label">
           Name
