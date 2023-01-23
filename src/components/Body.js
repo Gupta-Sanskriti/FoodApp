@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import useOnline from "../utils/useOnline";
 import CardsComponent from "./CardsComponent";
 import Search from "./Search";
 import Shimmer from "./Shimmer";
@@ -32,6 +33,12 @@ const Body = () => {
   }
 
   if(!allRestaurant) return <h1>No Data found</h1>;
+
+  const isOnline = useOnline();
+
+  if(!isOnline){
+    return (<h1> Offline </h1>)
+  }
 
   // if (Filteredrestaurants?.length === 0) return <h1>No Restaurants Found</h1>
 
