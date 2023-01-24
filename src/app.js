@@ -11,6 +11,7 @@ import Contact from "./components/Contact";
 import Login from "./components/Login";
 import Profile from "./components/Profile";
 
+
 const App = () => {
   return (
     <>
@@ -56,6 +57,9 @@ const appRouter = createBrowserRouter([
       }
 
     ]
+  },
+  {
+    path: "/footer"
   }
 ])
 

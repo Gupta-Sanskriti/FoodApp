@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 const Header = () => {
   // let new_title = "hello foods"
   const [new_title, setNew_title ] = useState("hello world")
-
   // each time the dom refreshesh component will re-render
   console.log("render")
 
