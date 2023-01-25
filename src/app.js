@@ -1,19 +1,24 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import Footer from "./components/Footer";
-import About from "./components/About";
+// import About from "./components/About";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu"
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Contact from "./components/Contact";
 import Login from "./components/Login";
 import Profile from "./components/Profile";
+import AboutClass from "./components/About";
 
 
 const App = () => {
-  console.log("useState:",useState())
+  // console.log("render app");
+  // useEffect(()=>{
+  //   console.log("useEffect app")
+  // })
+  // console.log("useState:",useState())
   return (
     <>
       <Header />
@@ -36,7 +41,8 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/about",
-        element:<About />,
+        // element:<About />,
+        element: <AboutClass/>,
         children: [
           {
             path: 'profile',

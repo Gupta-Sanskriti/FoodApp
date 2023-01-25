@@ -4,7 +4,7 @@ const Search = (props) => {
     // console.log(props)
     const { searchText, allRestaurant, setSearchText, setFilteredRestaurant } = props;
     // console.log(restaurant)
-    console.log("rendering search");
+    // console.log("rendering search");
     return (
         <>
             <input

@@ -1,16 +1,41 @@
+import React from "react";
 import { Outlet } from "react-router-dom";
 import ProfileClass from "./ProfileClass";
 
-const About = () =>{
-    return(
-        <>
-            <h1>About</h1>
-            <div>This is the about page content </div>
-            <Outlet/>
-            <ProfileClass name="Sanskriti"/>
-        </>
+class AboutClass extends React.Component{
+    constructor(props){
+        super(props);
+        console.log('Parentclass constructor')
+    };
 
-    )
+    componentDidMount(){
+        console.log('Parentclass componentDidMount')
+    }
+
+    render(){
+        console.log('Parentclass render')
+        return(
+            <>
+                <h1>About</h1>
+                <div>This is the about page content </div>
+                <Outlet/>
+                <ProfileClass name="Sanskriti"/>
+            </>
+        )
+    }
 }
 
-export default About;
+// const About = () =>{
+//     return(
+//         <>
+//             <h1>About</h1>
+//             <div>This is the about page content </div>
+//             <Outlet/>
+//             <ProfileClass name="Sanskriti"/>
+//         </>
+
+//     )
+// }
+
+// export default About;
+export default AboutClass

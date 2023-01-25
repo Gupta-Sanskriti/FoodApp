@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 // Header Component
@@ -6,7 +6,11 @@ const Header = () => {
   // let new_title = "hello foods"
   const [new_title, setNew_title ] = useState("hello world")
   // each time the dom refreshesh component will re-render
-  console.log("render")
+  // console.log("Headerrender")
+  // console.log("render Header");
+  // useEffect(()=>{
+  //   console.log("useEffect header")
+  // })
 
     return (
       <div className="header">

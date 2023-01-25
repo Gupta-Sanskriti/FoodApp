@@ -17,17 +17,22 @@ const Body = () => {
   // useEffect(()=>{
   //   console.log("render Effect");
   // },[restaurants])
-
+  // console.log("render body")
   useEffect(() => {
     getRestaurants();
-  }, []);
+    
+  },[]);
+
+  // useEffect(()=>{
+  //   console.log("useEffect body")
+  // })
 
   async function getRestaurants() {
     const data = await fetch(
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.9161991&lng=80.9442732&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
-    console.log(json);
+    // console.log(json);
     setAllRestaurant(json?.data?.cards[2]?.data?.data?.cards);
     setFilteredRestaurant(json?.data?.cards[2]?.data?.data?.cards);
   }

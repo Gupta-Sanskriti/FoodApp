@@ -8,12 +8,15 @@ class ProfileClass extends React.Component{
         this.state = {
             count:0,
             count2:0,
-        }
+        };
+        console.log('Child constructor')
         
     }
-
-    
+    componentDidMount(){
+        console.log('Child componentDidMount')
+    }
     render(){
+        console.log('Child render')
         // console.log(this.props)
         // console.log('sasa',sasa)
         return(
