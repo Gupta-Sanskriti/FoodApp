@@ -13,6 +13,7 @@ import Profile from "./components/Profile";
 
 
 const App = () => {
+  console.log("useState:",useState())
   return (
     <>
       <Header />
@@ -40,7 +41,11 @@ const appRouter = createBrowserRouter([
           {
             path: 'profile',
             element: <Profile/>
-          }
+          },
+          // {
+          //   path:'footer',
+          //   element:<Footer/>
+          // }
         ]
       },
       {
@@ -59,7 +64,8 @@ const appRouter = createBrowserRouter([
     ]
   },
   {
-    path: "/footer"
+    path: "/footer",
+    element: <Footer/>
   }
 ])
 

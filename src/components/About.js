@@ -7,7 +7,7 @@ const About = () =>{
             <h1>About</h1>
             <div>This is the about page content </div>
             <Outlet/>
-            <ProfileClass name={"Sanskriti"}/>
+            <ProfileClass name="Sanskriti"/>
         </>
 
     )

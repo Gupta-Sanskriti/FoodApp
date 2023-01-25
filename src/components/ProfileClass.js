@@ -9,8 +9,13 @@ class ProfileClass extends React.Component{
             count:0,
             count2:0,
         }
+        
     }
+
+    
     render(){
+        // console.log(this.props)
+        // console.log('sasa',sasa)
         return(
             <>
             <h1>Class based components</h1>
