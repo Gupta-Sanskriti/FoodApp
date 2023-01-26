@@ -15,6 +15,12 @@ class ProfileClass extends React.Component{
     componentDidMount(){
         console.log('Child componentDidMount')
     }
+    componentWillUnmount(){
+        console.log('Child componentWillUnmount')
+    }
+    componentWillUnmount(){
+        console.log('Child componentWillUnmount')
+    }
     render(){
         console.log('Child render')
         // console.log(this.props)
