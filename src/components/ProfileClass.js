@@ -13,12 +13,19 @@ class ProfileClass extends React.Component{
         
     }
     componentDidMount(){
+        // runs once after initial render
         console.log('Child componentDidMount')
+        // this.timer = setInterval(()=>{
+        //     console.log("timer clicked")
+        // },1000)
+    }
+    componentDidUpdate(){
+        // runs everytime after state changes
+        console.log('Child componentDidUpdate')
     }
     componentWillUnmount(){
-        console.log('Child componentWillUnmount')
-    }
-    componentWillUnmount(){
+        // used for cleanup
+        // clearInterval(this.timer)
         console.log('Child componentWillUnmount')
     }
     render(){

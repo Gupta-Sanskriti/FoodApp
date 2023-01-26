@@ -1,6 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import ProfileClass from "./ProfileClass";
+// import Profile from "./Profile";
 
 class AboutClass extends React.Component{
     constructor(props){
@@ -31,7 +32,7 @@ class AboutClass extends React.Component{
 //             <h1>About</h1>
 //             <div>This is the about page content </div>
 //             <Outlet/>
-//             <ProfileClass name="Sanskriti"/>
+//             {/* <ProfileClass name="Sanskriti"/> */}
 //         </>
 
 //     )
