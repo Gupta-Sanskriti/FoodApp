@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import useOnline from "../utils/useOnline";
 
 // Header Component
 const Header = () => {
@@ -11,6 +12,10 @@ const Header = () => {
   // useEffect(()=>{
   //   console.log("useEffect header")
   // })
+
+  const isOnline = useOnline();
+
+
 
     return (
       <div className="header">
@@ -32,6 +37,9 @@ const Header = () => {
             </li>
             <li>
               <Link to="/Login">Login</Link>
+            </li>
+            <li>
+              {isOnline? "🟢" : "🔴"}
             </li>
           </ul>
         </nav>
