@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { lazy, Suspense ,useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -10,8 +10,11 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Contact from "./components/Contact";
 import Login from "./components/Login";
 import Profile from "./components/Profile";
-import AboutClass from "./components/About";
+import Shimmer from "./components/Shimmer";
+// import AboutClass from "./components/About";
 
+
+const About = lazy(()=>import('./components/About'));
 
 const App = () => {
   // console.log("render app");
@@ -41,8 +44,8 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/about",
-        // element:<About />,
-        element: <AboutClass/>,
+        element:<Suspense fallback={<Shimmer/>}><About /></Suspense>,
+        // element: <AboutClass/>,
         children: [
           {
             path: 'profile',
