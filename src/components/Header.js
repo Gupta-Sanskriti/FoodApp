@@ -18,11 +18,11 @@ const Header = () => {
 
 
     return (
-      <div className="flex p-2 bg-pink-50 shadow-lg bg-darker-green-sap ">
-        <h1 className="w-20% p-2 text-2xl">FoodApp</h1>
+      <div className="flex p-2 shadow-lg bg-darker-green-sap ">
+        <h1 className="w-20% p-2 m-2 text-2xl text-white">FoodApp</h1>
         {/* <button onClick={()=>{setNew_title("food world") }}>{new_title}</button> */}
         <nav className="w-60% flex p-2 m-auto ">
-          <ul className="flex justify-items-end">
+          <ul className="flex justify-between px-10 text-white">
             <li className="p-2">
               <Link to="/">Home</Link>
             </li>

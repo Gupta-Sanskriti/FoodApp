@@ -3,7 +3,6 @@ import { IMG_CDN_URL } from "../../constants";
 
 // Cards Component
 const CardsComponent = (props) => {
-  const [num, setNum] = useState(0);
 
   // destructuring the required data from restaurantList Api
   const { cloudinaryImageId, name, cuisines, avgRating, minDeliveryTime } =
@@ -35,29 +34,7 @@ const CardsComponent = (props) => {
         <p className="text-darker-green-sap">{cuisines.join(", ")}</p>
         <h4 className="bg-light-green-sap text-white w-20 p-2 py-1 rounded-md">{avgRating} stars</h4>
         <p>Delivery Time: {minDeliveryTime} minutes</p>
-        <div className="flex w-16">
-        <button
-            className="bg-teal-600 rounded-lg p-2 py-1 text-white"
-            onClick={() => {
-              if(num<=0){
-                setNum(0)
-              }else{
-                setNum(num - 2);
-              }
-            }}
-          >
-            -
-          </button>
-          <p className="p-2 py-1">{num}</p>
-          <button
-            className="bg-teal-600 rounded-lg p-2 py-1 text-white"
-            onClick={() => {
-              setNum(num + 2);
-            }}
-          >
-            +
-          </button>
-        </div>
+        
     
     </div>
   );
