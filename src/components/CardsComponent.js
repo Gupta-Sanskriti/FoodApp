@@ -10,7 +10,7 @@ const CardsComponent = (props) => {
     props.restaurant.data;
 
   return (
-    <>
+    <div className="sm:w-60 h-96 p-5 shadow-xl sm:m-5  rounded-md hover:bg-slate-100 ">
       {/* One way of creating  
           <div className="card-item">
               <img src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" + restaurantList[0].data.cloudinaryImageId} alt="restaurant-image"></img>
@@ -24,19 +24,20 @@ const CardsComponent = (props) => {
       {/* Another way of rendering dom with ease of code */}
       
         <img
+          className="rounded-md shadow-sm mb-2"
           src={
             IMG_CDN_URL +
             cloudinaryImageId
           }
           alt="restaurant-image"
         ></img>
-        <h1>{name}</h1>
-        <p>{cuisines.join(", ")}</p>
-        <h4>{avgRating} stars</h4>
+        <h1 className="font-bold text-lg">{name}</h1>
+        <p className="text-pink-500">{cuisines.join(", ")}</p>
+        <h4 className="bg-pink-500 text-white w-20 p-2 py-1 rounded-md">{avgRating} stars</h4>
         <p>Delivery Time: {minDeliveryTime} minutes</p>
-        <div className="incdec">
+        <div className="flex w-16">
         <button
-            className="dec btn-di"
+            className="bg-pink-500 rounded-lg p-2 py-1 text-white"
             onClick={() => {
               if(num<=0){
                 setNum(0)
@@ -47,9 +48,9 @@ const CardsComponent = (props) => {
           >
             -
           </button>
-          <p className="incdec_val">{num}</p>
+          <p className="p-2 py-1">{num}</p>
           <button
-            className="inc btn-di"
+            className="bg-pink-500 rounded-lg p-2 py-1 text-white"
             onClick={() => {
               setNum(num + 2);
             }}
@@ -58,7 +59,7 @@ const CardsComponent = (props) => {
           </button>
         </div>
     
-    </>
+    </div>
   );
 };
 

@@ -44,8 +44,8 @@ const Body = () => {
   // if (Filteredrestaurants?.length === 0) return <h1>No Restaurants Found</h1>
 
   return (
-    <div className="body-container">
-      <div className="search-field">
+    <div className="">
+      <div className="bg-pink-500 p-5 my-2 w-[100rem]">
         <Search
           searchText={searchText}
           allRestaurant={allRestaurant}
@@ -57,8 +57,8 @@ const Body = () => {
         <Shimmer />
       ) : (
         <div className="restaurant">
-          <h1 className="card-head">Restaurants</h1>
-          <div className="cards">
+          <h1 className="font-bold text-5xl p-5 px-7">Restaurants</h1>
+          <div className="flex flex-wrap p-2">
             {Filteredrestaurants.map((restaurant) => (
               <Link className="card-item" to={"/restaurant/"+restaurant.data.id} key={restaurant.data.id}>
                 <CardsComponent

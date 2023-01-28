@@ -8,6 +8,7 @@ const Search = (props) => {
     return (
         <>
             <input
+                className="rounded-xl"
                 type="text"
                 value={searchText}
                 onChange={(e) => {
