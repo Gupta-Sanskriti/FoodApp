@@ -18,27 +18,27 @@ const Header = () => {
 
 
     return (
-      <div className="flex p-2 bg-pink-50 shadow-lg">
-        <h1 className="logo">FoodApp</h1>
+      <div className="flex p-2 bg-pink-50 shadow-lg bg-darker-green-sap ">
+        <h1 className="w-20% p-2 text-2xl">FoodApp</h1>
         {/* <button onClick={()=>{setNew_title("food world") }}>{new_title}</button> */}
-        <nav className="flex justify-between">
-          <ul className="flex justify-between p-2 ">
-            <li>
+        <nav className="w-60% flex p-2 m-auto ">
+          <ul className="flex justify-items-end">
+            <li className="p-2">
               <Link to="/">Home</Link>
             </li>
-            <li>
+            <li className="p-2">
               <Link to="/about">About</Link>
             </li>
-            <li>
+            <li className="p-2">
               <Link to="/contact">ContactUs</Link>
             </li>
-            <li>
+            <li className="p-2">
               <Link to="/">Cart</Link>
             </li>
-            <li>
+            <li className="p-2">
               <Link to="/Login">Login</Link>
             </li>
-            <li>
+            <li className="p-2">
               {isOnline? "🟢" : "🔴"}
             </li>
           </ul>

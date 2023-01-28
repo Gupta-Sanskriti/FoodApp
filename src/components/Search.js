@@ -8,7 +8,7 @@ const Search = (props) => {
     return (
         <>
             <input
-                className="rounded-xl"
+                className="rounded-2xl p-3 m-2 w-96 "
                 type="text"
                 value={searchText}
                 onChange={(e) => {
@@ -17,6 +17,7 @@ const Search = (props) => {
                 placeholder="Please search here"
             ></input>
             <button
+                className="rounded-2xl p-3 m-2 w-56 text-white bg-dark-green-sap "
                 type="submit"
                 onClick={() => {
                     const fRestaurants = allRestaurant.filter((rest) =>{

@@ -3,8 +3,8 @@ import React, { useState } from "react";
 
 const Footer = () => {
     return (
-      <div className="footer">
-        <p className="footer-text">FoodApp copyrights &copy; 2022-2023</p>
+      <div className="flex justify-center p-5 bg-darker-green-sap ">
+        <p className="">FoodApp copyrights &copy; 2022-2023</p>
       </div>
     );
 };

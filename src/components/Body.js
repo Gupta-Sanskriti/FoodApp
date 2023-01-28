@@ -45,7 +45,7 @@ const Body = () => {
 
   return (
     <div className="">
-      <div className="bg-pink-500 p-5 my-2 w-[100rem]">
+      <div className="bg-darker-green-sap p-5 my-2 w-100%">
         <Search
           searchText={searchText}
           allRestaurant={allRestaurant}

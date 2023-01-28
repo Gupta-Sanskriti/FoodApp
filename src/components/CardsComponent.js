@@ -32,12 +32,12 @@ const CardsComponent = (props) => {
           alt="restaurant-image"
         ></img>
         <h1 className="font-bold text-lg">{name}</h1>
-        <p className="text-pink-500">{cuisines.join(", ")}</p>
-        <h4 className="bg-pink-500 text-white w-20 p-2 py-1 rounded-md">{avgRating} stars</h4>
+        <p className="text-darker-green-sap">{cuisines.join(", ")}</p>
+        <h4 className="bg-light-green-sap text-white w-20 p-2 py-1 rounded-md">{avgRating} stars</h4>
         <p>Delivery Time: {minDeliveryTime} minutes</p>
         <div className="flex w-16">
         <button
-            className="bg-pink-500 rounded-lg p-2 py-1 text-white"
+            className="bg-teal-600 rounded-lg p-2 py-1 text-white"
             onClick={() => {
               if(num<=0){
                 setNum(0)
@@ -50,7 +50,7 @@ const CardsComponent = (props) => {
           </button>
           <p className="p-2 py-1">{num}</p>
           <button
-            className="bg-pink-500 rounded-lg p-2 py-1 text-white"
+            className="bg-teal-600 rounded-lg p-2 py-1 text-white"
             onClick={() => {
               setNum(num + 2);
             }}
