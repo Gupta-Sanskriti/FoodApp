@@ -19,8 +19,8 @@ const RestaurantMenu = () => {
     <Shimmer />
   ) : (
     <div className="rest flex">
-      <div className="rest-details border-2 border-solid border-light-green-sap rounded-md m-5 p-5 h-[30rem]">
-        <h1 className="bg-light-green-sap w-44 px-2 rounded-md mb-3 ">
+      <div className="rest-details border-2 border-solid border-light-green-sap rounded-md m-5 p-5 h-[32rem]">
+        <h1 className="bg-light-green-sap w-52 px-2 rounded-md mb-3 ">
           Restaurant id : {resInfo?.id}
         </h1>
         <h2 className="text-4xl mb-3">{resInfo?.name}</h2>
@@ -36,18 +36,20 @@ const RestaurantMenu = () => {
         <h3>{resInfo?.costForTwoMsg}</h3>
       </div>
       <div className="rest-menu w-92 ">
-        <h1 className="my-5 mt-0 p-5 text-5xl">Menu</h1>
-        <ul className="rest-details ml-4">
+        <h1 className="my-5 mt-0 p-3 text-5xl">Menu</h1>
+        
           {Object.values(resInfo?.menu?.items).map((item) => {
             // console.log(item.name);
             return (
-              <div className="flex justify-between m-2">
-                <li className="" key={item.id}>
-                  {item.name}
-                </li>
+              <div className="flex justify-between border-solid border-light-green-sap border-2 px-6 py-2 m-2 rounded-md">
+                <ul className="rest-details ">
+                    <li className="p-2 pl-0" key={item.id}>
+                    {item.name}
+                    </li>
+                </ul>
                 <div className="flex w-16">
                   <button
-                    className="bg-teal-600 rounded-lg p-2  text-white bg-darker-green-sap"
+                    className="bg-teal-600 rounded-lg p-2  text-white bg-darker-green-sap "
                     onClick={() => {
                       if (num <= 0) {
                         setNum(0);
@@ -71,7 +73,7 @@ const RestaurantMenu = () => {
               </div>
             );
           })}
-        </ul>
+       
       </div>
     </div>
   );

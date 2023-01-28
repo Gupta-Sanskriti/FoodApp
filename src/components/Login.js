@@ -33,10 +33,10 @@ const Login = () => {
   console.log("formik errors", formik.errors);
 
   return (
-    <div className="form-container">
-      <h1>Login</h1>
-      <form className="form-card" onSubmit={formik.handleSubmit}>
-        <label htmlFor="name" className="input-label">
+    <div className="form-container h-[78.5vh]">
+      <h1 className="text-5xl m-5">Login</h1>
+      <form className=" m-5 py-5  text-xl" onSubmit={formik.handleSubmit}>
+        <label htmlFor="name" className="input-label p-2 ">
           Name
         </label>
         <input
@@ -46,12 +46,12 @@ const Login = () => {
           placeholder="Enter your name here!"
           onChange={formik.handleChange}
           value={formik.values.name}
-          className="input-field"
+          className="input-field p-2 border-b-2 border-darker-green-sap focus:outline-none"
         />
         {formik.errors.name ? (
-          <div className="form-validation">{formik.errors.name} </div>
+          <div className="form-validation p-2">{formik.errors.name} </div>
         ) : null}
-        <label htmlFor="email" className="input-label">
+        <label htmlFor="email" className="input-label p-2">
           Email
         </label>
         <input
@@ -61,12 +61,12 @@ const Login = () => {
           placeholder="Enter your email here!"
           onChange={formik.handleChange}
           value={formik.values.email}
-          className="input-field"
+          className="input-field p-2 border-b-2 border-darker-green-sap focus:outline-none"
         />
         {formik.errors.email ? (
-          <div className="form-validation">{formik.errors.email} </div>
+          <div className="form-validation p-2">{formik.errors.email} </div>
         ) : null}
-        <label htmlFor="password" className="input-label">
+        <label htmlFor="password" className="input-label p-2">
           Password
         </label>
         <input
@@ -76,12 +76,12 @@ const Login = () => {
           placeholder="Enter your password here!"
           onChange={formik.handleChange}
           value={formik.values.password}
-          className="input-field"
+          className="input-field p-2 border-b-2 border-darker-green-sap focus:outline-none"
         />
         {formik.errors.password ? (
-          <div className="form-validation">{formik.errors.password} </div>
+          <div className="form-validation p-2">{formik.errors.password} </div>
         ) : null}
-        <button type="submit" className="submit-btn">
+        <button type="submit" className="submit-btn p-2 bg-darker-green-sap ">
           Login
         </button>
       </form>

@@ -9,7 +9,7 @@ const CardsComponent = (props) => {
     props.restaurant.data;
 
   return (
-    <div className="sm:w-60 h-96 p-5 shadow-xl sm:m-5  rounded-md hover:bg-slate-100 ">
+    <div className="sm:w-60 h-80 p-5 shadow-xl sm:m-5  rounded-md hover:bg-slate-100 ">
       {/* One way of creating  
           <div className="card-item">
               <img src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" + restaurantList[0].data.cloudinaryImageId} alt="restaurant-image"></img>
