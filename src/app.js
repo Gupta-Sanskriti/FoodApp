@@ -7,10 +7,11 @@ import Footer from "./components/Footer";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu"
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import Contact from "./components/Contact";
+// import Contact from "./components/Contact";
 import Login from "./components/Login";
 import Profile from "./components/Profile";
 import Shimmer from "./components/Shimmer";
+import Instamart from "./components/Instamart";
 // import AboutClass from "./components/About";
 
 
@@ -58,8 +59,8 @@ const appRouter = createBrowserRouter([
         ]
       },
       {
-        path: "/contact",
-        element:<Contact />
+        path: "/instamart",
+        element:<Instamart />
       },
       {
         path:"/restaurant/:id",
