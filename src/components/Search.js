@@ -14,6 +14,14 @@ const Search = (props) => {
                 onChange={(e) => {
                     setSearchText(e.target.value);
                 }}
+                onKeyUp={()=>{const fRestaurants = allRestaurant.filter((rest) =>{
+                    if(searchText){
+                        return rest.data.name.toLowerCase().includes(searchText)
+                    }
+                }
+                );
+                setFilteredRestaurant(fRestaurants);}}
+
                 placeholder="Please search here"
             ></input>
             <button
