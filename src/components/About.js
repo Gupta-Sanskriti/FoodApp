@@ -27,7 +27,7 @@ import ProfileClass from "./ProfileClass";
 // }
 
 const About = () =>{
-    return(
+    
         <>
             <h1 className="font-bold text-5xl p-5 px-5">About</h1>
             <div >This is the about page content </div>
@@ -35,7 +35,7 @@ const About = () =>{
             {/* <ProfileClass name="Sanskriti"/> */}
         </>
 
-    )
+    
 }
 
 export default About;
