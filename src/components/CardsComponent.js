@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { IMG_CDN_URL } from "../../constants";
+import UserContext from "../utils/UserContext";
 
 // Cards Component
 const CardsComponent = (props) => {
@@ -7,6 +8,10 @@ const CardsComponent = (props) => {
   // destructuring the required data from restaurantList Api
   const { cloudinaryImageId, name, cuisines, avgRating, minDeliveryTime } =
     props.restaurant.data;
+
+  const {dname, email} = useContext(UserContext);
+
+
 
   return (
     <div className="sm:w-60 h-80 p-5 shadow-xl sm:m-5  rounded-md hover:bg-slate-100 ">
@@ -34,7 +39,8 @@ const CardsComponent = (props) => {
         <p className="text-darker-green-sap">{cuisines.join(", ")}</p>
         <h4 className="bg-light-green-sap text-white w-20 p-2 py-1 rounded-md">{avgRating} stars</h4>
         <p>Delivery Time: {minDeliveryTime} minutes</p>
-        
+        <p>name: {dname}</p>
+        <p>email: {email}</p>
     
     </div>
   );

@@ -8,7 +8,7 @@ const Section = ({ title, description , isVisible, setIsVisible}) => {
       {isVisible ? (
         <button
           onClick={() => {
-            setIsVisible();
+            setIsVisible(false);
           }}
           className="border-2 border-blue"
         >
@@ -17,7 +17,7 @@ const Section = ({ title, description , isVisible, setIsVisible}) => {
       ) : (
         <button
           onClick={() => {
-            setIsVisible();
+            setIsVisible(true);
           }}
           className="border-2 border-blue"
         >
@@ -41,7 +41,7 @@ const Instamart = () => {
           "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque fugit placeat quasi cum facere iusto nam dolor quae. Suscipit, architecto"
         }
         isVisible={sectionVisible === "about"}
-        setIsVisible={()=>setSectionVisible(sectionVisible==="about"?"":"about")}
+        setIsVisible={()=>setSectionVisible(sectionVisible==="about"?"contact":"about")}
 
       />
       <Section
@@ -50,7 +50,7 @@ const Instamart = () => {
           "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque fugit placeat quasi cum facere iusto nam dolor quae. Suscipit, architecto"
         }
         isVisible={sectionVisible==="contact"}
-        setIsVisible={()=>setSectionVisible(sectionVisible==="contact"?"":"contacts")}
+        setIsVisible={()=>setSectionVisible(sectionVisible==="contact"?"careers":"contact")}
 
       />
       <Section
@@ -59,7 +59,7 @@ const Instamart = () => {
           "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque fugit placeat quasi cum facere iusto nam dolor quae. Suscipit, architecto"
         }
         isVisible={sectionVisible==="careers"}
-        setIsVisible={()=>setSectionVisible(sectionVisible==="careers"?"":"careers")}
+        setIsVisible={()=>setSectionVisible(sectionVisible==="careers"?"about":"careers")}
 
       />
     </div>

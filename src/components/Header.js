@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import useOnline from "../utils/useOnline";
+import UserContext from "../utils/UserContext";
 
 // Header Component
 const Header = () => {
@@ -12,12 +13,13 @@ const Header = () => {
   // useEffect(()=>{
   //   console.log("useEffect header")
   // })
-
+  const {dname, email} = useContext(UserContext)
   const isOnline = useOnline();
 
   return (
     <div className="flex  justify-between p-2 shadow-lg bg-darker-green-sap ">
       <h1 className="w-20% p-2 m-2 text-2xl text-white">FoodApp</h1>
+      <h2>{dname} and {email}</h2>
       {/* <button onClick={()=>{setNew_title("food world") }}>{new_title}</button> */}
       <nav className="w-60% p-2 ">
         <ul className="flex justify-evenly p-2 px-10 text-white">
