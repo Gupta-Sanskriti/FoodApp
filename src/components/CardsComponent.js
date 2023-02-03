@@ -9,7 +9,7 @@ const CardsComponent = (props) => {
   const { cloudinaryImageId, name, cuisines, avgRating, minDeliveryTime } =
     props.restaurant.data;
 
-  const {dname, email} = useContext(UserContext);
+  const {user} = useContext(UserContext);
 
 
 
@@ -39,8 +39,8 @@ const CardsComponent = (props) => {
         <p className="text-darker-green-sap">{cuisines.join(", ")}</p>
         <h4 className="bg-light-green-sap text-white w-20 p-2 py-1 rounded-md">{avgRating} stars</h4>
         <p>Delivery Time: {minDeliveryTime} minutes</p>
-        <p>name: {dname}</p>
-        <p>email: {email}</p>
+        <p>name: {user.dname}</p>
+        <p>email: {user.email}</p>
     
     </div>
   );

@@ -1,10 +1,16 @@
-import React,{useEffect} from "react";
+import React,{useContext, useEffect, useState} from "react";
+import UserContext from "../utils/UserContext";
 
 const Search = (props) => {
     // console.log(props)
     const { searchText, allRestaurant, setSearchText, setFilteredRestaurant } = props;
     // console.log(restaurant)
     // console.log("rendering search");
+    const {user, setUser} = useContext(UserContext)
+    const arr ="sanskriti"
+    console.log(...arr)
+    
+    
     return (
         <>
             <input
@@ -39,6 +45,12 @@ const Search = (props) => {
             >
                 Search
             </button>
+            <input type="text" id="dname" value={user.name} onChange={(e)=>{
+                setUser({dname: e.target.value, email :'ads'});
+            }}></input>
+            <input type="text" id="email" value={user.email} onChange={(e)=>{
+                setUser({...user,  email : e.target.value})
+            }}></input>
         </>
     );
 };

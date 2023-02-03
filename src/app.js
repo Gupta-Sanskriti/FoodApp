@@ -13,11 +13,16 @@ import Profile from "./components/Profile";
 import Shimmer from "./components/Shimmer";
 import Instamart from "./components/Instamart";
 // import AboutClass from "./components/About";
+import UserContext from "./utils/UserContext";
 
 
 const About = lazy(()=>import('./components/About'));
 
 const App = () => {
+  const [user, setUser] = useState({
+    name:"Sanskriti",
+    email: "sanskriti@gmail.com"
+  })
   // console.log("render app");
   // useEffect(()=>{
   //   console.log("useEffect app")
@@ -26,12 +31,13 @@ const App = () => {
 
 
   return (
-    <>
+    <UserContext.Provider value={{user:user, setUser:setUser}}>
+      
       <Header />
       {/* Outlet - to fill in different pages */}
       <Outlet />
       <Footer />
-    </>
+    </UserContext.Provider>
   );
 };
 
