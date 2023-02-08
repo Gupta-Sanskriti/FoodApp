@@ -14,7 +14,8 @@ import Shimmer from "./components/Shimmer";
 import Instamart from "./components/Instamart";
 // import AboutClass from "./components/About";
 import UserContext from "./utils/UserContext";
-
+import {Provider} from "react-redux"
+import store from "./utils/store"
 
 const About = lazy(()=>import('./components/About'));
 
@@ -31,6 +32,9 @@ const App = () => {
 
 
   return (
+    // Redux proider
+    <Provider store={store}>
+      {/* Context provider */}
     <UserContext.Provider value={{user:user, setUser:setUser}}>
       
       <Header />
@@ -38,6 +42,7 @@ const App = () => {
       <Outlet />
       <Footer />
     </UserContext.Provider>
+    </Provider>
   );
 };
 
