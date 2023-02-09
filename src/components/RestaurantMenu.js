@@ -4,9 +4,12 @@ import restaurantList from "../restaurant-list";
 import { IMG_CDN_URL } from "../../constants";
 import Shimmer from "./Shimmer";
 import useRestaurant from "../utils/useRestaurant";
+import { useDispatch, useSelector } from "react-redux";
+import { addItem, removeItem } from "../utils/ReduxSlices/cartSlice";
+// import { addItem } from "../utils/ReduxSlices/cartSlice";
 
 const RestaurantMenu = () => {
-    const [num, setNum] = useState(0);
+  // const [num, setNum] = useState(0);
 
   const { id } = useParams();
   // const [resInfo, setRestaurantInfo] = useState(null);
@@ -14,6 +17,18 @@ const RestaurantMenu = () => {
   const resInfo = useRestaurant(id);
 
   console.log(resInfo);
+
+  const itemlen = useSelector(store=>store.cart.items.length)
+
+  const dispatch = useDispatch();
+
+  const handleChange = (name) => {
+    dispatch(addItem(name));
+  };
+
+  const handleRemoveChange = () =>{
+    dispatch(removeItem())
+  }
 
   return resInfo == null ? (
     <Shimmer />
@@ -34,46 +49,44 @@ const RestaurantMenu = () => {
           {resInfo?.avgRating} stars
         </h3>
         <h3>{resInfo?.costForTwoMsg}</h3>
+        <button className="bg-dark-green-sap p-2" onClick={()=>handleChange()}>addItem</button>
       </div>
       <div className="rest-menu w-92 ">
         <h1 className="my-5 mt-0 p-3 text-5xl">Menu</h1>
-        
-          {Object.values(resInfo?.menu?.items).map((item) => {
-            // console.log(item.name);
-            return (
-              <div className="flex justify-between border-solid border-light-green-sap border-2 px-6 py-2 m-2 rounded-md">
-                <ul className="rest-details ">
-                    <li className="p-2 pl-0" key={item.id}>
-                    {item.name}
-                    </li>
-                </ul>
-                <div className="flex w-16">
-                  <button
-                    className="bg-teal-600 rounded-lg p-2  text-white bg-darker-green-sap "
-                    onClick={() => {
-                      if (num <= 0) {
-                        setNum(0);
-                      } else {
-                        setNum(num - 1);
-                      }
-                    }}
-                  >
-                    -
-                  </button>
-                  <p className="p-2 ">{num}</p>
-                  <button
-                    className="bg-teal-600 rounded-lg p-2  text-white bg-darker-green-sap"
-                    onClick={() => {
-                      setNum(num + 1);
-                    }}
-                  >
-                    +
-                  </button>
-                </div>
+
+        {Object.values(resInfo?.menu?.items).map((item) => {
+          // console.log(item.name);
+          return (
+            <div className="flex justify-between border-solid border-light-green-sap border-2 px-6 py-2 m-2 rounded-md">
+              <ul className="rest-details ">
+                <li className="p-2 pl-0" key={item.id}>
+                  {item.name}
+                </li>
+              </ul>
+              <div className="flex w-16">
+                <button
+                  className="bg-teal-600 rounded-lg p-2  text-white bg-darker-green-sap "
+                  onClick={() => {
+                    
+                    handleRemoveChange()
+                  }}
+                >
+                  -
+                </button>
+                <p className="p-2 ">{itemlen}</p>
+                <button
+                  className="bg-teal-600 rounded-lg p-2  text-white bg-darker-green-sap"
+                  onClick={() => {
+                    // setNum(num + 1);
+                    handleChange(item.name)
+                  }}
+                >
+                  +
+                </button>
               </div>
-            );
-          })}
-       
+            </div>
+          );
+        })}
       </div>
     </div>
   );
