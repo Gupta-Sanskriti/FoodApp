@@ -16,7 +16,7 @@ const RestaurantMenu = () => {
 
   const resInfo = useRestaurant(id);
 
-  console.log(resInfo);
+  // console.log(resInfo);
 
   const itemlen = useSelector(store=>store.cart.items.length)
 
@@ -57,7 +57,7 @@ const RestaurantMenu = () => {
         {Object.values(resInfo?.menu?.items).map((item) => {
           // console.log(item.name);
           return (
-            <div className="flex justify-between border-solid border-light-green-sap border-2 px-6 py-2 m-2 rounded-md">
+            <div key={item.id} className="flex justify-between border-solid border-light-green-sap border-2 px-6 py-2 m-2 rounded-md">
               <ul className="rest-details ">
                 <li className="p-2 pl-0" key={item.id}>
                   {item.name}
@@ -78,7 +78,7 @@ const RestaurantMenu = () => {
                   className="bg-teal-600 rounded-lg p-2  text-white bg-darker-green-sap"
                   onClick={() => {
                     // setNum(num + 1);
-                    handleChange(item.name)
+                    handleChange(item)
                   }}
                 >
                   +

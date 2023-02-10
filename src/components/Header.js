@@ -3,6 +3,8 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import useOnline from "../utils/useOnline";
 import UserContext from "../utils/UserContext";
+import {AiOutlineShoppingCart, AiFillHome} from "react-icons/ai"
+import {FiLogIn} from "react-icons/fi"
 // import store from "../utils/store";
 // Header Component
 const Header = () => {
@@ -27,7 +29,7 @@ const Header = () => {
       <nav className="w-60% p-2 ">
         <ul className="flex justify-evenly p-2 px-10 text-white">
           <li className="p-2 hover:border-b-2 border-solid border-dark-green-sap">
-            <Link to="/">Home</Link>
+            <Link to="/"><AiFillHome className="text-2xl"/></Link>
           </li>
           <li className="p-2 hover:border-b-2 border-solid border-dark-green-sap">
             <Link to="/about">About</Link>
@@ -36,10 +38,10 @@ const Header = () => {
             <Link to="/instamart">Instamart</Link>
           </li>
           <li className="p-2 hover:border-b-2 border-solid border-dark-green-sap">
-            <Link to="/">Cart {cartItems.length}</Link>
+            <Link to="/cart" className="flex"> <AiOutlineShoppingCart className="text-2xl"/>{cartItems.length}</Link>
           </li>
           <li className="p-2 hover:border-b-2 border-solid border-dark-green-sap">
-            <Link to="/Login">Login</Link>
+            <Link to="/Login"><FiLogIn className="text-2xl"/></Link>
           </li>
           <li className="p-2 hover:border-b-2 border-solid border-dark-green-sap">{isOnline ? "🟢" : "🔴"}</li>
         </ul>

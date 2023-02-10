@@ -12,7 +12,8 @@ module.exports = {
       'dark-green-sap': '#778f51',
       'light-green-sap': '#acc38b',
       'dark-sand-green': '#c9c8b4',
-      'white':'#ffffff'
+      'white':'#ffffff',
+      'black':'#000000'
     },
     extend: {}
   },
